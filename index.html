@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JavaScript -->
+	<script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="img/favicon.svg">
+    
+    <!-- Site Title  -->
+    <title>betcoinscan</title>
+    
+    <!-- Social Media -->
+    <meta property="og:title" content="betcoinscan"/>
+    <meta property="og:url" content="https://www.betcoinscan.com/" />
+    <meta property="og:image" content="https://www.betcoinscan.com/img/social.png" />
+
+    <meta name="title" content="Title">
+    <meta name="description" content="Description">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.betcoinscan.com/">
+    <meta property="og:title" content="Title">
+    <meta property="og:description" content="Description">
+    <meta property="og:image" content="https://www.betcoinscan.com/img/preview.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.betcoinscan.com/">
+    <meta property="twitter:title" content="Title">
+    <meta property="twitter:description" content="Description">
+    <meta property="twitter:image" content="https://www.betcoinscan.com/img/preview.png">
+    <meta name="theme-color" content="#000000"/>
+</head>
+<body>
+    coming soon
+
+    <script>
+        $('.burger').click( function() {
+            $(".mob-nav").toggleClass("show");
+            $(".burger").toggleClass("expand");
+        } );
+
+        $('.link').click( function() {
+            $(".mob-nav").removeClass("show");
+            $(".burger").removeClass("expand");
+        } );
+
+        $(".link").click(function(e) {
+            e.preventDefault();
+            var aid = $(this).attr("href");
+            $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+        });
+    </script>
+</body>
+</html>
