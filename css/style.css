@@ -7,173 +7,8 @@
   display: flex;
   width: 100%;
   height: 60px;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px); }
-  .nav:after {
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    content: '';
-    background: #17171B; }
-  .nav .content {
-    position: relative;
-    display: flex;
-    width: 100%;
-    max-width: 1240px;
-    margin: 0 20px;
-    height: 60px; }
-    .nav .content .logo {
-      position: relative;
-      z-index: 2;
-      display: block;
-      margin: 10px 36px 10px 0;
-      width: 124px;
-      height: 40px;
-      background: url("../img/logo.svg") no-repeat center left;
-      background-size: 124px auto; }
-    .nav .content ul {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-wrap: nowrap;
-      width: calc(100% - 280px); }
-      .nav .content ul li {
-        padding: 0 10px; }
-        .nav .content ul li .link {
-          display: flex;
-          height: 59px;
-          align-items: center;
-          color: #868394;
-          font-size: 16px;
-          border-bottom: 1px solid rgba(0, 0, 0, 0);
-          transition: all 0.3s ease-in-out; }
-          .nav .content ul li .link:hover {
-            color: #FFF;
-            border-bottom: 1px solid #07FBFD; }
-    .nav .content .app {
-      z-index: 2;
-      margin: 10px 0;
-      display: flex;
-      position: relative;
-      align-items: center;
-      justify-content: center;
-      width: 120px;
-      height: 40px;
-      color: #000;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 4px;
-      cursor: pointer;
-      moz-transition: all .4s ease-in-out;
-      -o-transition: all .4s ease-in-out;
-      -webkit-transition: all .4s ease-in-out;
-      transition: all .4s ease-in-out;
-      background-size: 300% 100%;
-      background-image: linear-gradient(to right, #F506F4, #07FBFD, #00E0E2, #10BDBE); }
-      .nav .content .app:after {
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 120px;
-        height: 40px;
-        content: 'SOON';
-        color: #FFF;
-        font-size: 16px;
-        border-radius: 4px;
-        background: rgba(0, 0, 0, 0.75);
-        opacity: 0;
-        transition: all 0.3s ease-in-out; }
-      .nav .content .app:hover {
-        background-position: 100% 0;
-        moz-transition: all .4s ease-in-out;
-        -o-transition: all .4s ease-in-out;
-        -webkit-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); }
-        .nav .content .app:hover:after {
-          opacity: 1; }
-    .nav .content .burger {
-      display: none; }
-  @media screen and (max-width: 767px) {
-    .nav {
-      backdrop-filter: none; }
-      .nav .content {
-        margin: 0; }
-        .nav .content .logo {
-          margin: 10px 0 10px 20px;
-          width: calc(100% - 200px); }
-        .nav .content .burger {
-          display: flex;
-          width: 60px;
-          height: 60px;
-          align-items: center;
-          justify-content: center; }
-          .nav .content .burger .bar {
-            position: relative;
-            display: block;
-            width: 20px;
-            height: 2px;
-            background: #FFF;
-            border-radius: 1px;
-            transition: all 0.3s ease-in-out; }
-            .nav .content .burger .bar:after, .nav .content .burger .bar:before {
-              position: absolute;
-              content: '';
-              display: block;
-              width: 20px;
-              height: 2px;
-              background: #FFF;
-              border-radius: 1px;
-              transition: all 0.3s ease-in-out; }
-            .nav .content .burger .bar:after {
-              top: -8px; }
-            .nav .content .burger .bar:before {
-              top: 8px; }
-          .nav .content .burger.expand .bar {
-            background: rgba(255, 255, 255, 0); }
-            .nav .content .burger.expand .bar:before, .nav .content .burger.expand .bar:after {
-              top: 0; }
-            .nav .content .burger.expand .bar:before {
-              transform: rotate(-45deg); }
-            .nav .content .burger.expand .bar:after {
-              transform: rotate(45deg); }
-        .nav .content ul {
-          position: fixed;
-          width: 200px;
-          top: 60px;
-          left: 0;
-          flex-direction: column;
-          height: calc(100% - 70px);
-          padding-top: 10px;
-          background: #0F0F12;
-          box-shadow: 10px 0 10px rgba(0, 0, 0, 0.5);
-          transform: translateX(-200px);
-          transition: all 0.6s ease-in-out; }
-          .nav .content ul li {
-            width: 100%;
-            padding: 0; }
-            .nav .content ul li .link {
-              display: flex;
-              width: calc(100% - 40px);
-              padding: 0 20px;
-              height: 39px;
-              align-items: center;
-              color: #868394;
-              font-size: 16px;
-              border-bottom: 1px solid rgba(0, 0, 0, 0);
-              transition: all 0.3s ease-in-out; }
-              .nav .content ul li .link:hover {
-                color: #FFF;
-                border-bottom: 1px solid #07FBFD; }
-          .nav .content ul.show {
-            transform: translateX(0); } }
+  background: #111923;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1); }
 
 html {
   height: 100%; }
@@ -183,8 +18,8 @@ body {
   margin: 0;
   height: 100%;
   font-family: 'DM Sans', 'Roboto', Arial, Verdana;
-  color: #868394;
-  background: #000; }
+  color: #202A39;
+  background: #0D131C; }
 
 button, a {
   outline: none;
@@ -208,14 +43,14 @@ ul, p {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #0F0F12; }
+  background: #111923; }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #3C3A46; }
+  background: #161F2C; }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-image: linear-gradient(to bottom, #F506F4, #07FBFD); }
+  background: #AEBCD3; }
 
 /*# sourceMappingURL=style.css.map */

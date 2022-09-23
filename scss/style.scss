@@ -41,7 +41,7 @@ ul, p {
   
 /* Track */
 ::-webkit-scrollbar-track {
-    background: $dark15; 
+    background: $dark25; 
 }
   
 /* Handle */
@@ -51,5 +51,5 @@ ul, p {
   
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background-image: linear-gradient(to bottom, $alert , $success);
+    background: $grey100;
 }
