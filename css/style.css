@@ -5,10 +5,296 @@
   top: 0;
   z-index: 10;
   display: flex;
-  width: 100%;
+  width: calc(100% - 40px);
   height: 60px;
+  padding: 0 20px;
+  align-items: center;
   background: #111923;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1); }
+  .nav .logo {
+    display: block;
+    width: 136px;
+    height: 40px;
+    background: url(../img/logo.svg) no-repeat left center;
+    background-size: auto 40px; }
+  .nav .btn-group {
+    display: flex;
+    width: calc(100% - 136px);
+    height: 36px;
+    justify-content: flex-end; }
+    .nav .btn-group .buy-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 36px;
+      color: #FFF;
+      font-size: 14px;
+      font-weight: bold;
+      background: #00AE52;
+      border-radius: 3px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      transition: all 0.3s ease-in-out; }
+      .nav .btn-group .buy-btn:hover {
+        background: #00C75D; }
+
+.banner {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  padding: 100px 0 40px 0; }
+  .banner:after {
+    position: absolute;
+    right: calc(40% - 138px);
+    top: calc(50% - 68px);
+    z-index: 2;
+    width: 158px;
+    height: 196px;
+    content: '';
+    background: url(../img/bet-coin.png) no-repeat center;
+    background-size: 158px 196px;
+    animation-name: token-motion;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease; }
+
+@keyframes token-motion {
+  0% {
+    top: calc(50% - 68px); }
+  50% {
+    top: calc(50% - 74px); }
+  100% {
+    top: calc(50% - 68px); } }
+  .banner .content {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+    width: 100%;
+    background: url(../img/banner.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 8px; }
+    .banner .content:before {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      top: 0;
+      content: '';
+      width: 340px;
+      height: 100%;
+      background: url("../img/leagues.png") repeat-y left -23px;
+      background-size: 540px auto;
+      border-radius: 0 8px 8px 0; }
+    .banner .content h1 {
+      margin: 0;
+      width: calc(60% - 40px);
+      min-height: 100px;
+      padding: 30px 0 30px 40px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #FFF;
+      font-style: italic;
+      line-height: 1.2;
+      letter-spacing: -2px; }
+      .banner .content h1 .betting-fund {
+        display: block;
+        color: #00AE52; }
+  @media screen and (max-width: 1320px) {
+    .banner {
+      padding: 100px 20px 40px 20px;
+      width: calc(100% - 40px); } }
+  @media screen and (max-width: 1080px) {
+    .banner:after {
+      position: absolute;
+      right: 10px;
+      top: 70px; }
+    @keyframes token-motion {
+      0% {
+        top: 70px; }
+      50% {
+        top: 60px; }
+      100% {
+        top: 70px; } }
+    .banner .content {
+      padding-bottom: 120px; }
+      .banner .content h1 {
+        display: flex;
+        width: calc(100% - 200px);
+        padding: 30px 100px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center; }
+      .banner .content:before {
+        top: inherit;
+        bottom: 0;
+        width: 100%;
+        height: 120px;
+        background: url("../img/leagues-mob.svg") no-repeat center;
+        background-size: 90% auto;
+        border-radius: 0 0 8px 8px; } }
+  @media screen and (max-width: 768px) {
+    .banner:after {
+      width: 79px;
+      height: 98px;
+      background: url(../img/bet-coin.png) no-repeat center;
+      background-size: 79px 98px; }
+    .banner .content {
+      padding-bottom: 80px; }
+      .banner .content h1 {
+        width: calc(100% - 120px);
+        padding: 30px 60px; }
+      .banner .content:before {
+        height: 80px; } }
+
+.stats {
+  margin: 0 auto;
+  width: calc(100% - 20px);
+  max-width: 1300px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px; }
+  .stats .block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10px 20px 10px;
+    width: calc(33.33% - 60px);
+    padding: 10px 20px;
+    background: #111923;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; }
+    .stats .block h2, .stats .block h3, .stats .block h4 {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 30px;
+      color: #FFF;
+      font-weight: bold;
+      font-size: 18px; }
+    .stats .block .amount {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 86px;
+      color: #00AE52;
+      font-weight: bold;
+      font-size: 48px;
+      justify-content: center;
+      letter-spacing: -2px; }
+      .stats .block .amount .bet {
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin-right: 6px;
+        background: url(../img/icon-bet.svg) no-repeat;
+        background-size: 32px; }
+    .stats .block .data {
+      display: flex;
+      flex-direction: column;
+      width: 50%; }
+      .stats .block .data label, .stats .block .data .dd {
+        display: flex;
+        font-size: 14px;
+        font-weight: bold; }
+      .stats .block .data label {
+        color: #FFF; }
+      .stats .block .data .dd {
+        color: #00AE52; }
+      .stats .block .data.rs label, .stats .block .data.rs .dd {
+        justify-content: flex-end; }
+      .stats .block .data.rs .dd {
+        color: #ED1D49; }
+    .stats .block.fund {
+      text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+      background: url(../img/field-texture.svg) repeat #00AE52 center;
+      background-size: 40px 1px; }
+      .stats .block.fund .amount {
+        color: #FFF; }
+      .stats .block.fund .data .dd {
+        color: #00FF78; }
+      .stats .block.fund .data.rs .dd {
+        color: #00FF78; }
+  @media screen and (max-width: 1080px) {
+    .stats .block {
+      width: calc(50% - 60px); } }
+  @media screen and (max-width: 768px) {
+    .stats .block {
+      width: calc(100% - 60px); } }
+
+.history {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px; }
+  .history h5 {
+    margin: 0;
+    display: block;
+    font-weight: 600;
+    color: #FFF;
+    font-size: 18px; }
+  .history label {
+    margin: 0 0 20px 0;
+    display: block;
+    font-weight: normal;
+    color: #AEBCD3;
+    font-size: 14px; }
+  .history .table-responsive {
+    width: 100%;
+    min-width: 280px;
+    overflow-x: auto;
+    background: #111923;
+    border-radius: 8px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1); }
+    .history .table-responsive table {
+      width: 100%; }
+      .history .table-responsive table thead tr {
+        height: 40px;
+        background: #202A39; }
+        .history .table-responsive table thead tr th {
+          text-align: left;
+          color: #AEBCD3;
+          padding-left: 20px;
+          font-size: 14px;
+          font-weight: normal;
+          white-space: nowrap; }
+          .history .table-responsive table thead tr th.status {
+            padding-right: 10px; }
+      .history .table-responsive table tbody tr td {
+        height: 40px;
+        text-align: left;
+        color: #AEBCD3;
+        padding: 6px 0 6px 20px;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: normal; }
+        .history .table-responsive table tbody tr td .bet {
+          display: block;
+          color: #FFF;
+          font-weight: bold; }
+          .history .table-responsive table tbody tr td .bet a {
+            color: #FFF;
+            text-decoration: dashed;
+            transition: all 0.3s ease-in-out; }
+            .history .table-responsive table tbody tr td .bet a:hover {
+              color: #00AE52; }
+        .history .table-responsive table tbody tr td .dd {
+          font-size: 12px; }
+        .history .table-responsive table tbody tr td.active {
+          color: #FFF; }
+        .history .table-responsive table tbody tr td.won {
+          color: #00AE52; }
+        .history .table-responsive table tbody tr td.lost {
+          color: #ED1D49; }
+        .history .table-responsive table tbody tr td.pick-of-the-day {
+          width: 24%; }
+      .history .table-responsive table tbody tr.odd {
+        background: #161F2C; }
+  @media screen and (max-width: 1320px) {
+    .history {
+      margin: 0 20px;
+      width: calc(100% - 40px); } }
 
 html {
   height: 100%; }
@@ -51,6 +337,6 @@ ul, p {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #AEBCD3; }
+  background: #202A39; }
 
 /*# sourceMappingURL=style.css.map */

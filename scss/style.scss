@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 @import 'variables.scss';
 @import 'nav.scss';
+@import 'banner.scss';
+@import 'stats.scss';
+@import 'history.scss';
 
 html {
     height: 100%;
@@ -51,5 +54,5 @@ ul, p {
   
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: $grey100;
+    background: $dark75;
 }
