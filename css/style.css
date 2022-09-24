@@ -158,12 +158,26 @@
   .stats .block {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
     margin: 0 10px 20px 10px;
     width: calc(33.33% - 60px);
     padding: 10px 20px;
     background: #111923;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px; }
+    .stats .block.coming-soon:before {
+      z-index: 3;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: rgba(13, 19, 28, 0.75);
+      border-radius: 8px; }
     .stats .block h2, .stats .block h3, .stats .block h4 {
       margin: 0;
       display: flex;
@@ -191,6 +205,52 @@
         margin-right: 6px;
         background: url(../img/icon-bet.svg) no-repeat;
         background-size: 32px; }
+    .stats .block .token-holdings {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      height: 86px; }
+      .stats .block .token-holdings:before {
+        position: absolute;
+        display: block;
+        z-index: 2;
+        left: 10px;
+        top: 35px;
+        width: 16px;
+        height: 16px;
+        content: '';
+        background: url(../img/icon-bet.svg) no-repeat;
+        background-size: 16px; }
+      .stats .block .token-holdings .input {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        width: calc(100% - 144px);
+        height: 36px;
+        padding: 0 0 0 34px;
+        font-size: 14px;
+        color: #FFF;
+        border-radius: 3px;
+        border: none;
+        background-color: #202A39; }
+      .stats .block .token-holdings .btn-save {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 36px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #0D131C;
+        background: #FFF;
+        border-radius: 3px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease-in-out;
+        border: none;
+        text-transform: uppercase; }
     .stats .block .data {
       display: flex;
       flex-direction: column;
@@ -207,6 +267,12 @@
         justify-content: flex-end; }
       .stats .block .data.rs .dd {
         color: #ED1D49; }
+    .stats .block.multiple-cols .data {
+      width: 33.33%; }
+      .stats .block.multiple-cols .data.push label, .stats .block.multiple-cols .data.push .dd {
+        justify-content: center; }
+      .stats .block.multiple-cols .data.push .dd {
+        color: #AEBCD3; }
     .stats .block.fund {
       text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
       background: url(../img/field-texture.svg) repeat #00AE52 center;

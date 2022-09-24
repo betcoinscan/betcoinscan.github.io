@@ -9,12 +9,30 @@
     .block {
         display: flex;
         flex-wrap: wrap;
+        position: relative;
         margin: 0 10px 20px 10px;
         width: calc(33.33% - 60px);
         padding: 10px 20px;
         background: $dark25;
         box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
+
+        &.coming-soon {
+            &:before {
+                z-index: 3;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                content: '';
+                background: rgba(13, 19, 28, 0.75);
+                border-radius: 8px;
+            }
+        }
 
         h2, h3, h4 {
             margin: 0;
@@ -49,6 +67,60 @@
             }
         }
 
+        .token-holdings {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            height: 86px;
+
+            &:before {
+                position: absolute;
+                display: block;
+                z-index: 2;
+                left: 10px;
+                top: 35px;
+                width: 16px;
+                height: 16px;
+                content:'';
+                background: url(../img/icon-bet.svg) no-repeat;
+                background-size: 16px;
+            }
+
+            .input {
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                width: calc(100% - 144px);
+                height: 36px;
+                padding: 0 0 0 34px;
+                font-size: $font-14px;
+                color: $white100;
+                border-radius: 3px;
+                border: none;
+                background-color: $dark75;
+            }
+
+            .btn-save {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 36px;
+                font-size: $font-14px;
+                font-weight: bold;
+                color: $dark0;
+                background: $white100;
+                border-radius: 3px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                transition: all 0.3s ease-in-out;
+                border: none;
+                text-transform: uppercase;
+            }
+        }
+
         .data {
             display: flex;
             flex-direction: column;
@@ -75,6 +147,22 @@
 
                 .dd {
                     color: $red100;
+                }
+            }
+        }
+
+        &.multiple-cols {
+            .data {
+                width: 33.33%;
+
+                &.push {
+                    label, .dd {
+                        justify-content: center;
+                    }
+                    
+                    .dd {
+                        color: $grey100;
+                    }
                 }
             }
         }
