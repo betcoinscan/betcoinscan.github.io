@@ -338,6 +338,12 @@
           font-size: 14px;
           line-height: 1.2;
           font-weight: normal; }
+          .history .table-responsive table tbody tr td .espn {
+            display: block;
+            width: 40px;
+            height: 16px;
+            background: url(../img/espn.svg) no-repeat center;
+            background-size: 100% auto; }
           .history .table-responsive table tbody tr td .bet {
             display: block;
             color: #FFF;
