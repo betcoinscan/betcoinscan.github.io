@@ -263,6 +263,18 @@
         color: #FFF; }
       .stats .block .data .dd {
         color: #00AE52; }
+        .stats .block .data .dd .up, .stats .block .data .dd .down {
+          display: flex;
+          padding: 0 2px;
+          align-items: center;
+          justify-content: center;
+          color: #FFF;
+          font-size: 12px;
+          border-radius: 2px; }
+        .stats .block .data .dd .up {
+          background: #00AE52; }
+        .stats .block .data .dd .down {
+          background: #ED1D49; }
       .stats .block .data.rs label, .stats .block .data.rs .dd {
         justify-content: flex-end; }
       .stats .block .data.rs .dd {

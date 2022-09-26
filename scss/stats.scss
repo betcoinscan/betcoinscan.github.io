@@ -138,6 +138,24 @@
 
             .dd {
                 color: $green100;
+
+                .up, .down {
+                    display: flex;
+                    padding: 0 2px;
+                    align-items: center;
+                    justify-content: center;
+                    color: $white100;
+                    font-size: $font-12px;
+                    border-radius: 2px;
+                }
+
+                .up {
+                    background: $green100;
+                }
+
+                .down {
+                    background: $red100;
+                }
             }
 
             &.rs {
