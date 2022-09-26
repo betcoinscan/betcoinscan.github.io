@@ -90,6 +90,10 @@
 
                         .dd {
                             font-size: $font-12px;
+
+                            a {
+                                color: $grey100;
+                            }
                         }
 
                         &.active {

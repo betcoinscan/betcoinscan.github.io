@@ -356,6 +356,8 @@
                 color: #00AE52; }
           .history .table-responsive table tbody tr td .dd {
             font-size: 12px; }
+            .history .table-responsive table tbody tr td .dd a {
+              color: #AEBCD3; }
           .history .table-responsive table tbody tr td.active {
             color: #FFF; }
           .history .table-responsive table tbody tr td.won {
