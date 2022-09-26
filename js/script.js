@@ -57,8 +57,8 @@ $( document ).ready(function() {
                     '<span class="dd">'+bet['Game']+'</span>' +
                     '</td>' +
                     '<td>'+bet.Dime+'</td>' +
-                    '<td>'+formatter.format(bet.Allocation.replace(',',''))+'</td>' +
-                    '<td>'+formatter.format(bet['Net Return'].replace(',',''))+'</td>' +
+                    '<td>'+formatter.format(bet.Allocation)+'</td>' +
+                    '<td>'+formatter.format(bet['Net Return'])+'</td>' +
                     '<td>'+bet.Odds+'</td>' +
                     '<td class="'+classn+'">'+text+'</td>' +
                 '</tr>';
