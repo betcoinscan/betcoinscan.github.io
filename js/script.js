@@ -20,7 +20,9 @@ function reveal(){
 
 
 var locale = 'en-US';
-var options = {style: 'currency', currency: 'usd', minimumFractionDigits: 0, maximumFractionDigits: 2};
+var options = {minimumFractionDigits: 0, maximumFractionDigits: 2};
+var formatter2 = new Intl.NumberFormat(locale, options);
+var options = {style: 'currency', currency: 'usd', minimumFractionDigits: 0, maximumFractionDigits: 0};
 var formatter = new Intl.NumberFormat(locale, options);
 
 $( document ).ready(function() {
@@ -65,5 +67,13 @@ $( document ).ready(function() {
             $('.betlist').append(betHTML);
 
         }
+    });
+
+    $.getJSON('https://api.betcoinscan.com/buyback.php',function(data){
+
+        $('.buybacktotal').html('<i class="bet"></i>'+formatter.format(data.buyback))
+        $('.buybackpercentage').html(formatter2.format(data.percentage)+'%');
+        $('.buybackvalue').html(formatter.format(data.value));
+
     });
 });
