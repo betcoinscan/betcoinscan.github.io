@@ -125,10 +125,29 @@
     <div class="history">
         <h5>History</h5>
         <div class="btn-group">
-            <a href="" class="tab active">Pick of the Day</a>
-            <a href="" class="tab">Community Bets</a>
+            <a href="javascript:void(0);" onclick="showTab(1)" class="tab tab1 active">Pick of the Day</a>
+            <a href="javascript:void(0);" onclick="showTab(2);" class="tab tab2">Community Bets</a>
         </div>
-        <div class="table-responsive">
+        <div class="table-responsive table table1">
+            <table class="table" cellspacing="0" cellpadding="0">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>League</th>
+                    <th>Pick of the Day</th>
+                    <th>Dime</th>
+                    <th>Allocation</th>
+                    <th>Net Return</th>
+                    <th>Odds</th>
+                    <th class="status">Status</th>
+                </tr>
+                </thead>
+                <tbody class="betlist bet1">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive table table2">
             <table class="table" cellspacing="0" cellpadding="0">
                 <thead>
                     <tr>
@@ -142,7 +161,7 @@
                         <th class="status">Status</th>
                     </tr>
                 </thead>
-                <tbody class="betlist">
+                <tbody class="betlist bet2">
 
                 </tbody>
             </table>
