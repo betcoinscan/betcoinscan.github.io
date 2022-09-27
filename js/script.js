@@ -24,6 +24,8 @@ var options = {minimumFractionDigits: 0, maximumFractionDigits: 2};
 var formatter2 = new Intl.NumberFormat(locale, options);
 var options = {style: 'currency', currency: 'usd', minimumFractionDigits: 0, maximumFractionDigits: 0};
 var formatter = new Intl.NumberFormat(locale, options);
+var options = {minimumFractionDigits: 0, maximumFractionDigits: 5};
+var tokenprice = new Intl.NumberFormat(locale, options);
 
 $( document ).ready(function() {
     $.getJSON('https://api.betcoinscan.com/',function(data){
@@ -72,6 +74,15 @@ $( document ).ready(function() {
     $.getJSON('https://api.betcoinscan.com/buyback.php',function(data){
 
         $('.buybacktotal').html('<i class="bet"></i>'+formatter.format(data.buyback))
+        $('.betprice').html(tokenprice.format(data.price))
+        $('.marketcap').html(formatter.format(data.price*100000000))
+
+        if(data.change.substr(0,1)=='-') {
+            $('.pricechange').html('<span class="down">' + data.change + '</span>');
+        }else{
+            $('.pricechange').html('<span class="up">' + data.change + '</span>');
+        }
+
         $('.buybackpercentage').html(formatter2.format(data.percentage)+'%');
         $('.buybackvalue').html(formatter.format(data.value));
 
