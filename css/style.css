@@ -162,6 +162,7 @@
     margin: 0 10px 20px 10px;
     width: calc(33.33% - 60px);
     padding: 10px 20px;
+    min-height: 174px;
     background: #111923;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px; }
@@ -388,7 +389,7 @@
           .history .table-responsive table tbody tr td.lost {
             color: #ED1D49; }
           .history .table-responsive table tbody tr td.pick-of-the-day {
-            width: 24%; }
+            width: 30%; }
         .history .table-responsive table tbody tr:nth-child(even) {
           background: #161F2C; }
         .history .table-responsive table tbody tr:nth-child(odd) {
