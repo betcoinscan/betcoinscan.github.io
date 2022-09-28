@@ -85,6 +85,16 @@
                             height: 16px;
                             background: url(../img/espn.svg) no-repeat center;
                             background-size: 100% auto;
+                            animation-name: blink;
+                            animation-duration: 3s;
+                            animation-iteration-count: infinite;
+                            animation-timing-function: ease;
+
+                            @keyframes blink {
+                                0% {opacity: 1;}
+                                50% {opacity: 0;}
+                                100% {opacity: 1;}
+                            }
                         }
 
                         .bet {
