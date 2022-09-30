@@ -71,7 +71,10 @@ function getPickOfTheDay(){
         $('.winrate').html(data.stats.winrate+'%');
 
         for(b in data.bets){
+
             var bet = data.bets[b];
+            var date = new Date((bet.TimestampUTC*1000)).toLocaleDateString();
+            var time = new Date((bet.TimestampUTC*1000)).toLocaleTimeString();
 
             var classn='won';
             var text='Won';
@@ -89,7 +92,7 @@ function getPickOfTheDay(){
             }
 
             var betHTML = '<tr>' +
-                '<td>'+bet.Date+'</td>' +
+                '<td>'+date+' '+time+'</td>' +
                 '<td>'+bet.League+'</td>' +
                 '<td class="pick-of-the-day">' +
                 '<span class="bet"><a href="'+bet['Link']+'" target="_blank">'+bet['Pick of the day']+'</a></span>' +
@@ -121,6 +124,8 @@ function getCommunityBets(){
 */
         for(b in data.bets){
             var bet = data.bets[b];
+            var date = new Date((bet.TimestampUTC*1000)).toLocaleDateString();
+            var time = new Date((bet.TimestampUTC*1000)).toLocaleTimeString();
 
             if(bet.Won==1) {
                 var classn = 'won';
@@ -140,7 +145,7 @@ function getCommunityBets(){
                 }
 
                 var betHTML = '<tr>' +
-                    '<td>' + bet.Date + '</td>' +
+                    '<td>'+date+' '+time+'</td>' +
                     '<td>' + bet.League + '</td>' +
                     '<td class="pick-of-the-day">' +
                     '<span class="bet"><a href="' + bet['Link'] + '" target="_blank">' + bet['Pick of the day'] + '</a></span>' +
