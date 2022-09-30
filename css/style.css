@@ -326,6 +326,7 @@
       font-size: 14px;
       color: #AEBCD3;
       background: #111923;
+      text-decoration: none;
       border-radius: 8px 8px 0 0; }
       .history .btn-group .tab.active {
         color: #FFF;
