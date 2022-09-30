@@ -74,10 +74,13 @@ function getPickOfTheDay(){
                 var classn='lost';
                 var text='Lost';
             }
-
-            if(typeof(bet['Livescore'])!=='undefined' && bet['Livescore']!==''){
-                var classn='';
-                var text='<a href="'+bet['Livescore']+'" target="_blank" class="espn"></a>';
+            if (typeof (bet['Livescore']) !== 'undefined' && bet['Livescore'] !== '') {
+                if (typeof (bet['Finished']) == 'undefined' || bet['Finished'] == '') {
+                    classn = '';
+                    text = '<a href="' + bet['Livescore'] + '" target="_blank" class="espn"></a>';
+                } else {
+                    text = '<a href="' + bet['Livescore'] + '" target="_blank">' + text + '</a>';
+                }
             }
 
             var betHTML = '<tr>' +
@@ -123,8 +126,12 @@ function getCommunityBets(){
                 }
 
                 if (typeof (bet['Livescore']) !== 'undefined' && bet['Livescore'] !== '') {
-                    var classn = '';
-                    var text = '<a href="' + bet['Livescore'] + '" target="_blank" class="espn"></a>';
+                    if (typeof (bet['Finished']) == 'undefined' || bet['Finished'] == '') {
+                        classn = '';
+                        text = '<a href="' + bet['Livescore'] + '" target="_blank" class="espn"></a>';
+                    } else {
+                        text = '<a href="' + bet['Livescore'] + '" target="_blank">' + text + '</a>';
+                    }
                 }
 
                 var betHTML = '<tr>' +
