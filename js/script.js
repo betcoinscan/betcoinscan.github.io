@@ -29,12 +29,17 @@ var formatter = new Intl.NumberFormat(locale, options);
 
 var options = {minimumFractionDigits: 0, maximumFractionDigits: 5};
 var tokenprice = new Intl.NumberFormat(locale, options);
+var currentprice = 0;
 
 $( document ).ready(function() {
-
+    if(typeof(localStorage.getItem("holdings"))!=='undefined') $("input.holdings").val(localStorage.getItem("holdings"))
     getPickOfTheDay();
 
     $.getJSON('https://api.betcoinscan.com/buyback.php',function(data){
+        currentprice=data.price;
+        if(typeof(localStorage.getItem("holdings"))!=='undefined') {
+            $('.networth').html('$'+formatter2.format(currentprice*localStorage.getItem("holdings")));
+        }
 
         var buybacktotal = new Intl.NumberFormat(locale, {minimumFractionDigits: 0, maximumFractionDigits: 0});
         $('.buybacktotal').html('<i class="bet"></i>'+buybacktotal.format(data.buyback))
@@ -162,4 +167,9 @@ function showTab(which){
 
     $('div.table').hide();
     $('div.table'+which).show();
+}
+
+function saveHoldings(){
+    localStorage.setItem("holdings", $("input.holdings").val().replace(',',''));
+    $('.networth').html('$'+formatter2.format(currentprice*localStorage.getItem("holdings")));
 }
