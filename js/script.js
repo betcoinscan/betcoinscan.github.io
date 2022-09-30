@@ -74,7 +74,7 @@ function getPickOfTheDay(){
 
             var bet = data.bets[b];
             var date = new Date((bet.TimestampUTC*1000)).toLocaleDateString();
-            var time = new Date((bet.TimestampUTC*1000)).toLocaleTimeString();
+            var time = new Date((bet.TimestampUTC*1000)).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
 
             var classn='won';
             var text='Won';
@@ -125,7 +125,7 @@ function getCommunityBets(){
         for(b in data.bets){
             var bet = data.bets[b];
             var date = new Date((bet.TimestampUTC*1000)).toLocaleDateString();
-            var time = new Date((bet.TimestampUTC*1000)).toLocaleTimeString();
+            var time = new Date((bet.TimestampUTC*1000)).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
 
             if(bet.Won==1) {
                 var classn = 'won';
