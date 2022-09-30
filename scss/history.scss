@@ -123,14 +123,29 @@
 
                         &.active {
                             color: $white100;
+
+                            a {
+                               color: $white100;
+                               text-decoration: dashed;
+                            }
                         }
 
                         &.won {
                             color: $green100;
+                            
+                            a {
+                                color: $green100;
+                                text-decoration: dashed;
+                            }
                         }
 
                         &.lost {
                             color: $red100;
+
+                            a {
+                                color: $red100;
+                                text-decoration: dashed;
+                            }
                         }
 
                         &.pick-of-the-day {

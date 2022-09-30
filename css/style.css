@@ -396,10 +396,19 @@
               color: #AEBCD3; }
           .history .table-responsive table tbody tr td.active {
             color: #FFF; }
+            .history .table-responsive table tbody tr td.active a {
+              color: #FFF;
+              text-decoration: dashed; }
           .history .table-responsive table tbody tr td.won {
             color: #00AE52; }
+            .history .table-responsive table tbody tr td.won a {
+              color: #00AE52;
+              text-decoration: dashed; }
           .history .table-responsive table tbody tr td.lost {
             color: #ED1D49; }
+            .history .table-responsive table tbody tr td.lost a {
+              color: #ED1D49;
+              text-decoration: dashed; }
           .history .table-responsive table tbody tr td.pick-of-the-day {
             width: 30%; }
         .history .table-responsive table tbody tr:nth-child(even) {
