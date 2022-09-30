@@ -364,22 +364,10 @@
           font-weight: normal; }
           .history .table-responsive table tbody tr td .espn {
             display: block;
-            width: 40px;
-            height: 16px;
+            width: 86px;
+            height: 14px;
             background: url(../img/espn.svg) no-repeat center;
-            background-size: 100% auto;
-            animation-name: blink;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease; }
-
-@keyframes blink {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
+            background-size: 100% auto; }
           .history .table-responsive table tbody tr td .bet {
             display: block;
             color: #FFF;
@@ -398,17 +386,17 @@
             color: #FFF; }
             .history .table-responsive table tbody tr td.active a {
               color: #FFF;
-              text-decoration: dashed; }
+              text-decoration: underline; }
           .history .table-responsive table tbody tr td.won {
             color: #00AE52; }
             .history .table-responsive table tbody tr td.won a {
               color: #00AE52;
-              text-decoration: dashed; }
+              text-decoration: underline; }
           .history .table-responsive table tbody tr td.lost {
             color: #ED1D49; }
             .history .table-responsive table tbody tr td.lost a {
               color: #ED1D49;
-              text-decoration: dashed; }
+              text-decoration: underline; }
           .history .table-responsive table tbody tr td.pick-of-the-day {
             width: 30%; }
         .history .table-responsive table tbody tr:nth-child(even) {
@@ -435,7 +423,6 @@ body {
 
 button, a {
   outline: none;
-  text-decoration: none;
   cursor: pointer; }
 
 ul, p {
