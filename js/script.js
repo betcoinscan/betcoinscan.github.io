@@ -256,7 +256,7 @@ function getCommunityBets(){
             var date = new Date((bet.TimestampUTC*1000)).toLocaleDateString();
             var time = new Date((bet.TimestampUTC*1000)).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
 
-            if(bet.Won==1 || bet.Won=='') {
+            if(bet.Won==1 || bet['Finished'] == '' || bet['Finished'] == '0') {
                 var classn = 'won';
                 var text = 'Won';
                 if (bet.Won == 0) {
