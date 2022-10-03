@@ -96,6 +96,7 @@ var chartoptions = {
         curve: 'straight',
         width: 2,
     },
+    tooltip: {}
 };
 
 $( document ).ready(function() {
@@ -131,6 +132,11 @@ $( document ).ready(function() {
         options.colors = ['#00AE52'];
         options.stroke.colors = ['#00AE52'];
         options.fill.gradient.gradientToColors = ['#00AE52'];
+        options.tooltip.y = {
+            formatter: function(value){
+                return value.toFixed(2)+" BET";
+            }
+        }
 
         var chart = new ApexCharts(document.querySelector(".buybackchart"), options);
         chart.render();
@@ -199,6 +205,11 @@ function getPickOfTheDay(){
         options.colors = ['#ED1D49'];
         options.stroke.colors = ['#ED1D49'];
         options.fill.gradient.gradientToColors = ['#ED1D49'];
+        options.tooltip.y = {
+            formatter: function(value){
+                return value.toFixed(2)+"%";
+            }
+        }
 
         var chart = new ApexCharts(document.querySelector(".winratechart"), options);
         chart.render();
@@ -213,6 +224,14 @@ function getPickOfTheDay(){
         options.colors = ['#ED1D49'];
         options.stroke.colors = ['#ED1D49'];
         options.fill.gradient.gradientToColors = ['#ED1D49'];
+        options.tooltip.y = {
+            formatter: function(value){
+                var options = {style: 'currency', currency: 'usd', minimumFractionDigits: 0, maximumFractionDigits: 0};
+                var formatter = new Intl.NumberFormat(locale, options);
+
+                return formatter.format(value);
+            }
+        }
 
         var chart = new ApexCharts(document.querySelector(".netreturnchart"), options);
         chart.render();
