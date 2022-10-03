@@ -83,7 +83,7 @@ function getPickOfTheDay(){
                 var text='Lost';
             }
             if (typeof (bet['Livescore']) !== 'undefined' && bet['Livescore'] !== '') {
-                if (typeof (bet['Finished']) == 'undefined' || bet['Finished'] == '') {
+                if (typeof (bet['Finished']) == 'undefined' || bet['Finished'] == '' || bet['Finished'] == '0') {
                     classn = '';
                     text = '<a href="' + bet['Livescore'] + '" target="_blank" class="espn"></a>';
                 } else {
@@ -136,7 +136,7 @@ function getCommunityBets(){
                 }
 
                 if (typeof (bet['Livescore']) !== 'undefined' && bet['Livescore'] !== '') {
-                    if (typeof (bet['Finished']) == 'undefined' || bet['Finished'] == '') {
+                    if (typeof (bet['Finished']) == 'undefined' || bet['Finished'] == '' || bet['Finished'] == '0') {
                         classn = '';
                         text = '<a href="' + bet['Livescore'] + '" target="_blank" class="espn"></a>';
                     } else {
