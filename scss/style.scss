@@ -55,3 +55,38 @@ ul, p {
 ::-webkit-scrollbar-thumb:hover {
     background: $dark75;
 }
+
+.apexcharts-xaxistooltip {
+    background-color: #0D131C !important;
+    border:1px solid #0D131C !important;
+    color: #AEBCD3 !important;
+}
+.apexcharts-xaxistooltip-bottom:after {
+    border-bottom-color: #0D131C !important;
+}
+.apexcharts-xaxistooltip-bottom:before {
+    border-bottom-color: #0D131C !important;
+}
+.apexcharts-tooltip {
+    background-color: #0D131C !important;
+    border:1px solid #0D131C !important;
+    color: #FFF;
+    box-shadow: unset !important;
+}
+.apexcharts-tooltip-title {
+    background-color:#0D131C !important;
+    border-bottom:1px solid #0D131C !important;
+    color:#fff !important;
+}
+.apexcharts-tooltip-text-y-label {
+    color: #AEBCD3 !important;
+}
+.buybackchart .apexcharts-tooltip-text-y-value {
+    color: #00AE52 !important;
+}
+.winratechart .apexcharts-tooltip-text-y-value {
+    color: #ED1D49 !important;
+}
+.netreturnchart .apexcharts-tooltip-text-y-value {
+    color: #ED1D49 !important;
+}
