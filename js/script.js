@@ -55,6 +55,83 @@ $( document ).ready(function() {
         $('.buybackpercentage').html(formatter2.format(data.percentage)+'%');
         $('.buybackvalue').html(formatter.format(data.value));
 
+        var options = {
+            series: [{
+                name: "Buyback",
+                data: data.buybacks.values
+            }],
+            chart: {
+                type: 'area',
+                height: 150,
+                width: '100%',
+                zoom: {
+                    enabled: false
+                },
+                toolbar: {
+                    show:false
+                }
+            },
+            grid: {
+                show: false,
+            },
+            fill: {
+                colors: ["#111923"],
+                type: 'gradient',
+                gradient: {
+                    type: "vertical",
+                    gradientToColors: ['#00AE52'],
+                    inverseColors: true,
+                    opacityFrom: 1,
+                    opacityTo: 0.9,
+                    stops: [0, 90, 100],
+                },
+            },
+            yaxis: {
+                floating: true,
+                axisTicks: {
+                    show: false
+                },
+                axisBorder: {
+                    show: false
+                },
+                labels: {
+                    show: false
+                },
+            },
+            xaxis: {
+                type:'datetime',
+                labels: {
+                    show: true,
+                    rotate: 0,
+                    hideOverlappingLabels: true,
+                    datetimeFormatter: {
+                        year: 'yyyy',
+                        month: 'MMM \'yy',
+                        day: 'dd MMM',
+                        hour: 'HH:mm'
+                    }
+                },
+                axisBorder: {
+                    show: false,
+                },
+                axisTicks: {
+                    show: false,
+                },
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            stroke: {
+                curve: 'straight',
+                width: 2,
+                colors: ['#00AE52'],
+            },
+            labels: data.buybacks.labels,
+        };
+
+        var chart = new ApexCharts(document.querySelector(".buybackchart"), options);
+        chart.render();
+
     });
 });
 
@@ -107,6 +184,166 @@ function getPickOfTheDay(){
             $('.betlist.bet1').append(betHTML);
 
         }
+
+
+
+        var options = {
+            series: [{
+                name: "Buyback",
+                data: data.winrate.values
+            }],
+            chart: {
+                type: 'area',
+                height: 150,
+                width: '100%',
+                zoom: {
+                    enabled: false
+                },
+                toolbar: {
+                    show:false
+                }
+            },
+            grid: {
+                show: false,
+            },
+            fill: {
+                colors: ["#111923"],
+                type: 'gradient',
+                gradient: {
+                    type: "vertical",
+                    gradientToColors: ['#ED1D49'],
+                    inverseColors: true,
+                    opacityFrom: 1,
+                    opacityTo: 0.9,
+                    stops: [0, 90, 100],
+                },
+            },
+            yaxis: {
+                floating: true,
+                axisTicks: {
+                    show: false
+                },
+                axisBorder: {
+                    show: false
+                },
+                labels: {
+                    show: false
+                },
+            },
+            xaxis: {
+                type:'datetime',
+                labels: {
+                    show: true,
+                    rotate: 0,
+                    hideOverlappingLabels: true,
+                    datetimeFormatter: {
+                        year: 'yyyy',
+                        month: 'MMM \'yy',
+                        day: 'dd MMM',
+                        hour: 'HH:mm'
+                    }
+                },
+                axisBorder: {
+                    show: false,
+                },
+                axisTicks: {
+                    show: false,
+                },
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            stroke: {
+                curve: 'straight',
+                width: 2,
+                colors: ['#ED1D49'],
+            },
+            labels: data.winrate.labels,
+        };
+
+        var chart = new ApexCharts(document.querySelector(".winratechart"), options);
+        chart.render();
+
+
+
+
+        var options = {
+            series: [{
+                name: "Buyback",
+                data: data.netreturn.values
+            }],
+            chart: {
+                type: 'area',
+                height: 150,
+                width: '100%',
+                zoom: {
+                    enabled: false
+                },
+                toolbar: {
+                    show:false
+                }
+            },
+            grid: {
+                show: false,
+            },
+            fill: {
+                colors: ["#111923"],
+                type: 'gradient',
+                gradient: {
+                    type: "vertical",
+                    gradientToColors: ['#ED1D49'],
+                    inverseColors: true,
+                    opacityFrom: 1,
+                    opacityTo: 0.9,
+                    stops: [0, 90, 100],
+                },
+            },
+            yaxis: {
+                floating: true,
+                axisTicks: {
+                    show: false
+                },
+                axisBorder: {
+                    show: false
+                },
+                labels: {
+                    show: false
+                },
+            },
+            xaxis: {
+                type:'datetime',
+                labels: {
+                    show: true,
+                    rotate: 0,
+                    hideOverlappingLabels: true,
+                    datetimeFormatter: {
+                        year: 'yyyy',
+                        month: 'MMM \'yy',
+                        day: 'dd MMM',
+                        hour: 'HH:mm'
+                    }
+                },
+                axisBorder: {
+                    show: false,
+                },
+                axisTicks: {
+                    show: false,
+                },
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            stroke: {
+                curve: 'straight',
+                width: 2,
+                colors: ['#ED1D49'],
+            },
+            labels: data.netreturn.labels,
+        };
+
+        var chart = new ApexCharts(document.querySelector(".netreturnchart"), options);
+        chart.render();
+
     });
 }
 
