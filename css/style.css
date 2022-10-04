@@ -294,9 +294,11 @@
       .stats .block.fund .amount {
         color: #FFF; }
       .stats .block.fund .data .dd {
-        color: #00FF78; }
+        color: #0D131C;
+        text-shadow: none; }
       .stats .block.fund .data.rs .dd {
-        color: #00FF78; }
+        color: #0D131C;
+        text-shadow: none; }
   @media screen and (max-width: 1080px) {
     .stats .block {
       width: calc(50% - 60px); } }

@@ -197,12 +197,14 @@
 
             .data {
                 .dd {
-                    color: $green50;
+                    color: $dark0;
+                    text-shadow: none;
                 }
     
                 &.rs {
                     .dd {
-                        color: $green50;
+                        color: $dark0;
+                        text-shadow: none;
                     }
                 }
             }
