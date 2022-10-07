@@ -25,23 +25,99 @@
         height: 36px;
         justify-content: flex-end;
 
-        .buy-btn {
+        .btn {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100px;
             height: 36px;
             color: $white100;
             font-size: $font-14px;
             font-weight: bold;
             text-decoration: none;
-            background: $green100;
             border-radius: 3px;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             transition: all 0.3s ease-in-out;
+        }
+
+        .bet-btn {
+            width: 120px;
+            margin-right: 10px;
+            background: $blue75;
+
+            .stake {
+                display: block;
+                margin-left: 8px;
+                width: 48px;
+                height: 24px;
+                background: url(../img/stake.svg) no-repeat center;
+                background-size: 48px 24px;
+            }
+
+            .tooltip {
+                position: absolute;
+                left: -15px;
+                top: 44px;
+                width: 150px;
+                padding: 4px 0;
+                color: $dark0;
+                text-align: center;
+                font-size: $font-12px;
+                background: $white100;
+                border-radius: 2px;
+                opacity: 0;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                transition: all 0.3s ease-in-out;
+
+                &:before {
+                    position: absolute;
+                    left: 73px;
+                    top: -4px;
+                    display: block;
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    border-bottom: 4px solid $white100;
+                }
+            }
+
+            &:hover {
+                background: $blue100;
+
+                .tooltip {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .buy-btn {
+            width: 80px;
+            background: $green100;
 
             &:hover {
                 background: $green75;
+            }
+        }
+    }
+
+    @media screen and (max-width: 575px) {
+        .btn-group {
+            .bet-btn {
+                width: 68px;
+                
+                .text {
+                    display: none;
+                }
+    
+                .stake {
+                    margin-left: 0;
+                }
+
+                .tooltip {
+                    left: -41px;
+                }
             }
         }
     }

@@ -22,22 +22,73 @@
     width: calc(100% - 136px);
     height: 36px;
     justify-content: flex-end; }
-    .nav .btn-group .buy-btn {
+    .nav .btn-group .btn {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100px;
       height: 36px;
       color: #FFF;
       font-size: 14px;
       font-weight: bold;
       text-decoration: none;
-      background: #00AE52;
       border-radius: 3px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       transition: all 0.3s ease-in-out; }
+    .nav .btn-group .bet-btn {
+      width: 120px;
+      margin-right: 10px;
+      background: #1475E1; }
+      .nav .btn-group .bet-btn .stake {
+        display: block;
+        margin-left: 8px;
+        width: 48px;
+        height: 24px;
+        background: url(../img/stake.svg) no-repeat center;
+        background-size: 48px 24px; }
+      .nav .btn-group .bet-btn .tooltip {
+        position: absolute;
+        left: -15px;
+        top: 44px;
+        width: 150px;
+        padding: 4px 0;
+        color: #0D131C;
+        text-align: center;
+        font-size: 12px;
+        background: #FFF;
+        border-radius: 2px;
+        opacity: 0;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease-in-out; }
+        .nav .btn-group .bet-btn .tooltip:before {
+          position: absolute;
+          left: 73px;
+          top: -4px;
+          display: block;
+          content: '';
+          width: 0;
+          height: 0;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          border-bottom: 4px solid #FFF; }
+      .nav .btn-group .bet-btn:hover {
+        background: #1683FD; }
+        .nav .btn-group .bet-btn:hover .tooltip {
+          opacity: 1; }
+    .nav .btn-group .buy-btn {
+      width: 80px;
+      background: #00AE52; }
       .nav .btn-group .buy-btn:hover {
         background: #00C75D; }
+  @media screen and (max-width: 575px) {
+    .nav .btn-group .bet-btn {
+      width: 68px; }
+      .nav .btn-group .bet-btn .text {
+        display: none; }
+      .nav .btn-group .bet-btn .stake {
+        margin-left: 0; }
+      .nav .btn-group .bet-btn .tooltip {
+        left: -41px; } }
 
 .banner {
   position: relative;
@@ -485,9 +536,9 @@ ul, p {
   color: #00AE52 !important; }
 
 .winratechart .apexcharts-tooltip-text-y-value {
-  color: #ED1D49 !important; }
+  color: #00AE52 !important; }
 
 .netreturnchart .apexcharts-tooltip-text-y-value {
-  color: #ED1D49 !important; }
+  color: #00AE52 !important; }
 
 /*# sourceMappingURL=style.css.map */
