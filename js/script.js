@@ -110,7 +110,11 @@ $( document ).ready(function() {
         }
 
         var buybacktotal = new Intl.NumberFormat(locale, {minimumFractionDigits: 0, maximumFractionDigits: 0});
-        $('.buybacktotal').html('<i class="bet"></i>'+buybacktotal.format(data.buyback))
+        if(data.buyback>0) {
+            $('.buybacktotal').html('<i class="bet"></i>' + buybacktotal.format(data.buyback))
+            $('.buybackpercentage').html(formatter2.format(data.percentage) + '%');
+            $('.buybackvalue').html(formatter.format(data.value));
+        }
         $('.betprice').html(tokenprice.format(data.price))
         $('.marketcap').html(formatter.format(data.price*100000000))
 
@@ -119,9 +123,6 @@ $( document ).ready(function() {
         }else{
             $('.pricechange').html('<span class="up">' + data.change + '</span>');
         }
-
-        $('.buybackpercentage').html(formatter2.format(data.percentage)+'%');
-        $('.buybackvalue').html(formatter.format(data.value));
 
         var options = chartoptions;
         options.series = [{
