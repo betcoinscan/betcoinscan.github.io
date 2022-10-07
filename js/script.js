@@ -223,10 +223,7 @@ function getPickOfTheDay(){
             name: "Net return",
             data: data.netreturn.values
         }];
-        /*options.labels = data.netreturn.labels;
-        options.colors = ['#ED1D49'];
-        options.stroke.colors = ['#ED1D49'];
-        options.fill.gradient.gradientToColors = ['#ED1D49'];*/
+
         options.colors = ['#00AE52'];
         options.stroke.colors = ['#00AE52'];
         options.fill.gradient.gradientToColors = ['#00AE52'];
