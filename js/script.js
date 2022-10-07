@@ -202,9 +202,12 @@ function getPickOfTheDay(){
             data: data.winrate.values
         }];
         options.labels = data.winrate.labels;
-        options.colors = ['#ED1D49'];
+        /*options.colors = ['#ED1D49'];
         options.stroke.colors = ['#ED1D49'];
-        options.fill.gradient.gradientToColors = ['#ED1D49'];
+        options.fill.gradient.gradientToColors = ['#ED1D49'];*/
+        options.colors = ['#00AE52'];
+        options.stroke.colors = ['#00AE52'];
+        options.fill.gradient.gradientToColors = ['#00AE52'];
         options.tooltip.y = {
             formatter: function(value){
                 return value.toFixed(2)+"%";
@@ -220,10 +223,13 @@ function getPickOfTheDay(){
             name: "Net return",
             data: data.netreturn.values
         }];
-        options.labels = data.netreturn.labels;
+        /*options.labels = data.netreturn.labels;
         options.colors = ['#ED1D49'];
         options.stroke.colors = ['#ED1D49'];
-        options.fill.gradient.gradientToColors = ['#ED1D49'];
+        options.fill.gradient.gradientToColors = ['#ED1D49'];*/
+        options.colors = ['#00AE52'];
+        options.stroke.colors = ['#00AE52'];
+        options.fill.gradient.gradientToColors = ['#00AE52'];
         options.tooltip.y = {
             formatter: function(value){
                 var options = {style: 'currency', currency: 'usd', minimumFractionDigits: 0, maximumFractionDigits: 0};
