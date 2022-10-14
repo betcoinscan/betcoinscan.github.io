@@ -108,7 +108,7 @@ $( document ).ready(function() {
         if(typeof(localStorage.getItem("holdings"))!=='undefined') {
             $('.networth').html('$'+formatter2.format(currentprice*localStorage.getItem("holdings")));
         }
-        $('.holders').html('<span class="up">' + data.holders + '</span>');
+        $('.holders').html(data.holders);
 
         var buybacktotal = new Intl.NumberFormat(locale, {minimumFractionDigits: 0, maximumFractionDigits: 0});
         if(data.buyback>0) {
