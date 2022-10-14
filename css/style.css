@@ -332,6 +332,8 @@
         justify-content: flex-end; }
       .stats .block .data.rs .dd {
         color: #ED1D49; }
+        .stats .block .data.rs .dd.holders {
+          color: #00AE52; }
     .stats .block.multiple-cols .data {
       width: 33.33%; }
       .stats .block.multiple-cols .data.push label, .stats .block.multiple-cols .data.push .dd {

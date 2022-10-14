@@ -166,6 +166,10 @@
 
                 .dd {
                     color: $red100;
+
+                    &.holders {
+                        color: $green100;
+                    }
                 }
             }
         }
