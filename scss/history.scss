@@ -139,6 +139,14 @@
                             }
                         }
 
+                        &.push {
+                            color: $white100;
+
+                            a {
+                                color: $white100;
+                            }
+                        }
+
                         &.pick-of-the-day {
                             width: 30%;
                         }
