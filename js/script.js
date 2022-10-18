@@ -166,9 +166,13 @@ function getPickOfTheDay(){
 
             var classn='won';
             var text='Won';
-            if(bet.Won==0){
+            if(bet.Lost==1){
                 var classn='lost';
                 var text='Lost';
+            }
+            else if(bet.Push==1){
+                var classn='push';
+                var text='Push';
             }
             if (typeof (bet['Livescore']) !== 'undefined' && bet['Livescore'] !== '') {
                 if (typeof (bet['Finished']) == 'undefined' || bet['Finished'] == '' || bet['Finished'] == '0') {
@@ -262,11 +266,15 @@ function getCommunityBets(){
             var time = new Date((bet.TimestampUTC*1000)).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
 
             //if(bet.Won==1 || bet['Finished'] == '' || bet['Finished'] == '0') {
-                var classn = 'won';
-                var text = 'Won';
-                if (bet.Won == 0) {
-                    var classn = 'lost';
-                    var text = 'Lost';
+                var classn='won';
+                var text='Won';
+                if(bet.Lost==1){
+                    var classn='lost';
+                    var text='Lost';
+                }
+                else if(bet.Push==1){
+                    var classn='push';
+                    var text='Push';
                 }
 
                 if (typeof (bet['Livescore']) !== 'undefined' && bet['Livescore'] !== '') {
