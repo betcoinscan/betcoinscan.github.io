@@ -66,6 +66,10 @@
                 background: url(../img/icon-bet.svg) no-repeat;
                 background-size: 32px;
             }
+
+            &.netreturn {
+                color: $red100;
+            }
         }
 
         .token-holdings {
